@@ -1,0 +1,15 @@
+org_name: nullstone
+name: azure-function
+friendly_name: Azure Function
+description: Creates a serverless function using Azure Functions.
+category: app
+subcategory: serverless
+provider_types:
+    - azure
+platform: azure-functions
+subplatform: ""
+type: ""
+appCategories: []
+is_public: true
+tool_name: opentofu
+source_url: https://github.com/nullstone-modules/azure-function
