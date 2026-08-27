@@ -4,6 +4,7 @@ friendly_name: Azure Function
 description: Creates a serverless function using Azure Functions.
 category: app
 subcategory: serverless
+app_type: generic
 provider_types:
     - azure
 platform: azure-functions
