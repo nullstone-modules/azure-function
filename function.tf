@@ -51,7 +51,7 @@ resource "azurerm_linux_function_app" "this" {
 
   virtual_network_subnet_id = local.private_subnet_ids[0]
 
-  app_settings = local.all_env_vars
+  app_settings = local.app_settings
 
   lifecycle {
     ignore_changes = [

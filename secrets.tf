@@ -22,10 +22,10 @@ resource "azurerm_key_vault" "app" {
 }
 
 resource "azurerm_key_vault_secret" "app_secret" {
-  for_each = nonsensitive(local.managed_secret_values)
+  for_each = data.ns_env_layout.this.managed_secret_keys
 
   name         = lower(replace("${local.resource_name}-${each.key}", "/[^a-zA-Z0-9-]/", "-"))
-  value        = sensitive(each.value)
+  value        = data.ns_env_values.this.secrets[each.key]
   key_vault_id = azurerm_key_vault.app.id
   tags         = local.tags
 }
